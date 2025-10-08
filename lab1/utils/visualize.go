@@ -92,9 +92,10 @@ func GenerateTimeComparisonPlot(resultsFile, outputFile string) error {
 
 	var arrayLinearTime, funcLinearTime float64
 	for _, r := range results.LinearSearchResults {
-		if r.TaskName == "array_search" {
+		switch r.TaskName {
+		case "array_search":
 			arrayLinearTime = r.ExecutionTime
-		} else if r.TaskName == "function_optimization" {
+		case "function_optimization":
 			funcLinearTime = r.ExecutionTime
 		}
 	}
@@ -183,7 +184,7 @@ func GenerateConvergencePlot(resultsFile, outputFile string) error {
 	p.X.Label.TextStyle.Font.Size = 14
 	p.Y.Label.Text = "Лучшая приспособленность (качество решения)"
 	p.Y.Label.TextStyle.Font.Size = 14
-	p.Legend.Top = true
+	p.Legend.Top = false
 	p.Legend.TextStyle.Font.Size = 10
 
 	configsToShow := 0
@@ -237,7 +238,7 @@ func GenerateConvergencePlot(resultsFile, outputFile string) error {
 			crossoverDesc = "униформное"
 		}
 
-		label := fmt.Sprintf("%s | %s мутация (%.2f) | %s скрещивание | популяция=%d",
+		label := fmt.Sprintf("%s | %.2f мутация | %s скрещивание | популяция=%d",
 			mutationDesc, r.Config.MutationProb, crossoverDesc, r.Config.PopulationSize)
 
 		p.Add(line)
@@ -255,20 +256,6 @@ func GenerateConvergencePlot(resultsFile, outputFile string) error {
 	}
 
 	return nil
-}
-
-func getMaxFitness(results *AllResults) float64 {
-	max := 0.0
-	for _, r := range results.GAResults {
-		if r.TaskName == "array_search" {
-			for _, val := range r.Convergence {
-				if val > max {
-					max = val
-				}
-			}
-		}
-	}
-	return max
 }
 
 func GenerateAccuracyVsTimePlot(resultsFile, outputFile string) error {
@@ -483,16 +470,6 @@ func calculateEfficiency(results *AllResults, taskName string, isGA bool) float6
 		}
 	}
 	return 0
-}
-
-func getMaxEfficiency(values []float64) float64 {
-	max := 0.0
-	for _, v := range values {
-		if v > max {
-			max = v
-		}
-	}
-	return max
 }
 
 func average(values []float64) float64 {

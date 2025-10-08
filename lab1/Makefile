@@ -1,5 +1,4 @@
-# Makefile для лабораторной работы №1 (Windows)
-
+# На Windows для запуска нужно установить инструмент make через choco install make 
 .PHONY: setup run clean help
 
 help:
