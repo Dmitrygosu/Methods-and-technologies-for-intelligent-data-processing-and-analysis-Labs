@@ -1,6 +1,4 @@
 # Compiled binaries
-test_build
-test_build.exe
 *.exe
 *.exe~
 *.dll
@@ -16,7 +14,7 @@ test_build.exe
 # Go workspace file
 go.work
 
-# Results and visualizations
+
 
 # IDE
 .idea/

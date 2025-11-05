@@ -1,0 +1,459 @@
+{
+  "regression_results": [
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "linear"
+      },
+      "r2": 0.948195788797571,
+      "rmse": 418.64269363106143,
+      "mae": 304.49735677287947,
+      "mape": 5.621350557620256,
+      "execution_time_ms": 0.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "ridge",
+        "alpha": 0.1
+      },
+      "r2": 0.8556301152067615,
+      "rmse": 698.8746509876862,
+      "mae": 477.4235951408394,
+      "mape": 9.547328576693147,
+      "execution_time_ms": 0.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "ridge",
+        "alpha": 1
+      },
+      "r2": 0.26879704421151196,
+      "rmse": 1572.8233664701406,
+      "mae": 1279.6053992741076,
+      "mape": 26.032669289440598,
+      "execution_time_ms": 0.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "ridge",
+        "alpha": 10
+      },
+      "r2": 0.0026630339892809163,
+      "rmse": 1836.8848895127005,
+      "mae": 1515.6244825695742,
+      "mape": 30.837355744447514,
+      "execution_time_ms": 0.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "lasso",
+        "alpha": 0.1
+      },
+      "r2": 0.9482029670616701,
+      "rmse": 418.6136879589641,
+      "mae": 304.4354396857258,
+      "mape": 5.620194758940902,
+      "execution_time_ms": 0.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "lasso",
+        "alpha": 1
+      },
+      "r2": 0.9482645929328599,
+      "rmse": 418.3645896083023,
+      "mae": 304.05032228803964,
+      "mape": 5.612628110889659,
+      "execution_time_ms": 1
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "lasso",
+        "alpha": 10
+      },
+      "r2": 0.9487148545677572,
+      "rmse": 416.5400637232475,
+      "mae": 302.3835885441245,
+      "mape": 5.58190535441071,
+      "execution_time_ms": 0.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "decision_tree",
+        "max_depth": 5
+      },
+      "r2": 0.985817617663321,
+      "rmse": 219.0461266339774,
+      "mae": 188.952380952381,
+      "mape": 3.6174292692604824,
+      "execution_time_ms": 3.4
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "decision_tree",
+        "max_depth": 10
+      },
+      "r2": 0.985122370962021,
+      "rmse": 224.35091560618451,
+      "mae": 190,
+      "mape": 3.5956138259841217,
+      "execution_time_ms": 3.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "decision_tree",
+        "max_depth": 15
+      },
+      "r2": 0.985122370962021,
+      "rmse": 224.35091560618451,
+      "mae": 190,
+      "mape": 3.5956138259841217,
+      "execution_time_ms": 3
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 10,
+        "max_features": 2
+      },
+      "r2": 0.9541185863474577,
+      "rmse": 393.9847198754552,
+      "mae": 250.2872000852903,
+      "mape": 4.296894758837751,
+      "execution_time_ms": 15.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 10,
+        "max_features": 3
+      },
+      "r2": 0.9812961925619808,
+      "rmse": 251.55096907779176,
+      "mae": 191.69584859584847,
+      "mape": 3.438686108779586,
+      "execution_time_ms": 22.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 10,
+        "max_features": 2
+      },
+      "r2": 0.9495275608351615,
+      "rmse": 413.22646691973034,
+      "mae": 274.6666666666667,
+      "mape": 4.727814019915489,
+      "execution_time_ms": 16.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 10,
+        "max_features": 3
+      },
+      "r2": 0.9800087720810728,
+      "rmse": 260.0642878141793,
+      "mae": 197.68888888888887,
+      "mape": 3.5260226114000135,
+      "execution_time_ms": 24.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 20,
+        "max_features": 2
+      },
+      "r2": 0.9539137480860369,
+      "rmse": 394.86321580701474,
+      "mae": 271.2140877031328,
+      "mape": 4.682546764876367,
+      "execution_time_ms": 40
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 20,
+        "max_features": 3
+      },
+      "r2": 0.9679388956939615,
+      "rmse": 329.34435345124723,
+      "mae": 228.39731946759812,
+      "mape": 3.8626032767335596,
+      "execution_time_ms": 60.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 20,
+        "max_features": 2
+      },
+      "r2": 0.9475544632588292,
+      "rmse": 421.22607824063425,
+      "mae": 289.25753968253963,
+      "mape": 4.949541909345612,
+      "execution_time_ms": 52.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 20,
+        "max_features": 3
+      },
+      "r2": 0.9688777562758574,
+      "rmse": 324.48635064773873,
+      "mae": 221.2935185185185,
+      "mape": 3.750225901922454,
+      "execution_time_ms": 50.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 30,
+        "max_features": 2
+      },
+      "r2": 0.9528920524358874,
+      "rmse": 399.21612506554334,
+      "mae": 259.32867418637096,
+      "mape": 4.808690505473756,
+      "execution_time_ms": 49.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 5,
+        "num_trees": 30,
+        "max_features": 3
+      },
+      "r2": 0.9721912587102215,
+      "rmse": 306.7267474276105,
+      "mae": 218.52451123352063,
+      "mape": 3.742834256906967,
+      "execution_time_ms": 71.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 30,
+        "max_features": 2
+      },
+      "r2": 0.9446883676060043,
+      "rmse": 432.5827740682618,
+      "mae": 292.08571428571435,
+      "mape": 5.416632894736351,
+      "execution_time_ms": 57
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "random_forest",
+        "max_depth": 10,
+        "num_trees": 30,
+        "max_features": 3
+      },
+      "r2": 0.973554793215567,
+      "rmse": 299.11243412899046,
+      "mae": 207.09714100064974,
+      "mape": 3.523415126888042,
+      "execution_time_ms": 76.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 10,
+        "learning_rate": 0.01
+      },
+      "r2": 0.16013834489734957,
+      "rmse": 1685.6401230270403,
+      "mae": 1388.2472112807402,
+      "mape": 28.265249501912592,
+      "execution_time_ms": 23.6
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 10,
+        "learning_rate": 0.1
+      },
+      "r2": 0.8873347095872003,
+      "rmse": 617.3849716168539,
+      "mae": 471.65168041757045,
+      "mape": 9.582828396981041,
+      "execution_time_ms": 24.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 10,
+        "learning_rate": 0.01
+      },
+      "r2": 0.16583592293878913,
+      "rmse": 1679.912745220569,
+      "mae": 1387.6322921499514,
+      "mape": 28.2229576652722,
+      "execution_time_ms": 30
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 10,
+        "learning_rate": 0.1
+      },
+      "r2": 0.9042350658326306,
+      "rmse": 569.1991470968203,
+      "mae": 458.35166413310924,
+      "mape": 9.26881667566606,
+      "execution_time_ms": 28.8
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 20,
+        "learning_rate": 0.01
+      },
+      "r2": 0.31735778147763216,
+      "rmse": 1519.6989221719932,
+      "mae": 1245.141122035687,
+      "mape": 25.362448591176555,
+      "execution_time_ms": 49.4
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 20,
+        "learning_rate": 0.1
+      },
+      "r2": 0.987221897107745,
+      "rmse": 207.91899814445256,
+      "mae": 159.42607253042146,
+      "mape": 3.1864647620286695,
+      "execution_time_ms": 73.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 20,
+        "learning_rate": 0.01
+      },
+      "r2": 0.329847227619827,
+      "rmse": 1505.7327368922213,
+      "mae": 1242.9213789507994,
+      "mape": 25.269470331159038,
+      "execution_time_ms": 57.4
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 20,
+        "learning_rate": 0.1
+      },
+      "r2": 0.9906449730962535,
+      "rmse": 177.90309508769582,
+      "mae": 147.33526740630717,
+      "mape": 2.9282683039862376,
+      "execution_time_ms": 67.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 30,
+        "learning_rate": 0.01
+      },
+      "r2": 0.44494628019671756,
+      "rmse": 1370.340496294352,
+      "mae": 1115.9675100362967,
+      "mape": 22.75318223494103,
+      "execution_time_ms": 80.2
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 3,
+        "num_trees": 30,
+        "learning_rate": 0.1
+      },
+      "r2": 0.9921230064037572,
+      "rmse": 163.24550421437326,
+      "mae": 137.6768309160742,
+      "mape": 2.719604737583781,
+      "execution_time_ms": 77
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 30,
+        "learning_rate": 0.01
+      },
+      "r2": 0.4627139426066796,
+      "rmse": 1348.2293239626383,
+      "mae": 1111.904961633087,
+      "mape": 22.59521489835791,
+      "execution_time_ms": 90
+    },
+    {
+      "task_name": "regression",
+      "config": {
+        "model_type": "gradient_boosting",
+        "max_depth": 5,
+        "num_trees": 30,
+        "learning_rate": 0.1
+      },
+      "r2": 0.9921614120909681,
+      "rmse": 162.8470516532379,
+      "mae": 144.9078465967221,
+      "mape": 2.8422315196347667,
+      "execution_time_ms": 92.2
+    }
+  ]
+}
