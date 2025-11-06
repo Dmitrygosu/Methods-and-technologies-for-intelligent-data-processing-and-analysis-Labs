@@ -1,0 +1,300 @@
+{
+  "clustering_results": [
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 2,
+        "max_iter": 100
+      },
+      "silhouette_score": 0.6233838017391983,
+      "calinski_harabasz": 522.6335358675956,
+      "davies_bouldin": 0.5139228955767131,
+      "n_clusters": 2,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 2,
+        "max_iter": 200
+      },
+      "silhouette_score": 0.6233838017391983,
+      "calinski_harabasz": 522.6335358675956,
+      "davies_bouldin": 0.5139228955767131,
+      "n_clusters": 2,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 3,
+        "max_iter": 100
+      },
+      "silhouette_score": 0.6084959681220912,
+      "calinski_harabasz": 746.9795876437338,
+      "davies_bouldin": 0.5071024218391122,
+      "n_clusters": 3,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 3,
+        "max_iter": 200
+      },
+      "silhouette_score": 0.6084959681220912,
+      "calinski_harabasz": 746.979587643734,
+      "davies_bouldin": 0.5071024218391122,
+      "n_clusters": 3,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 4,
+        "max_iter": 100
+      },
+      "silhouette_score": 0.5688259892866249,
+      "calinski_harabasz": 788.9227477224564,
+      "davies_bouldin": 0.5278313926247727,
+      "n_clusters": 4,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 4,
+        "max_iter": 200
+      },
+      "silhouette_score": 0.5691050128838688,
+      "calinski_harabasz": 814.239806415793,
+      "davies_bouldin": 0.5299267540743141,
+      "n_clusters": 4,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 5,
+        "max_iter": 100
+      },
+      "silhouette_score": 0.5767761041559557,
+      "calinski_harabasz": 863.6926492127762,
+      "davies_bouldin": 0.5054562971293974,
+      "n_clusters": 5,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "kmeans",
+        "k": 5,
+        "max_iter": 200
+      },
+      "silhouette_score": 0.5781424281680523,
+      "calinski_harabasz": 857.5169912250989,
+      "davies_bouldin": 0.5059903852632519,
+      "n_clusters": 5,
+      "execution_time_ms": 0
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.3,
+        "min_samples": 3
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.2
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.3,
+        "min_samples": 5
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.2
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.5,
+        "min_samples": 3
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.4
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.5,
+        "min_samples": 5
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.2
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.7,
+        "min_samples": 3
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.2
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "dbscan",
+        "eps": 0.7,
+        "min_samples": 5
+      },
+      "silhouette_score": 0,
+      "calinski_harabasz": 0,
+      "davies_bouldin": 0,
+      "n_clusters": 1,
+      "execution_time_ms": 0.6
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "hierarchical",
+        "k": 2
+      },
+      "silhouette_score": 0.6046872499873494,
+      "calinski_harabasz": 426.1742352917787,
+      "davies_bouldin": 0.5260368539561723,
+      "n_clusters": 2,
+      "execution_time_ms": 8
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "hierarchical",
+        "k": 3
+      },
+      "silhouette_score": 0.5840795455349985,
+      "calinski_harabasz": 606.3545233654423,
+      "davies_bouldin": 0.49652751665832184,
+      "n_clusters": 3,
+      "execution_time_ms": 7.6
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "hierarchical",
+        "k": 4
+      },
+      "silhouette_score": 0.5362628974928939,
+      "calinski_harabasz": 618.8202115277205,
+      "davies_bouldin": 0.5682123344461151,
+      "n_clusters": 4,
+      "execution_time_ms": 8
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 50,
+        "n_components": 2
+      },
+      "silhouette_score": 0.49870704139135863,
+      "calinski_harabasz": 418.10682869407657,
+      "davies_bouldin": 0.4111383164613705,
+      "n_clusters": 1,
+      "execution_time_ms": 2
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 100,
+        "n_components": 2
+      },
+      "silhouette_score": 0.6233838017391983,
+      "calinski_harabasz": 522.6335358675956,
+      "davies_bouldin": 0.5139228955767131,
+      "n_clusters": 2,
+      "execution_time_ms": 3.6
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 50,
+        "n_components": 3
+      },
+      "silhouette_score": 0.6487136943082931,
+      "calinski_harabasz": 702.6969825172683,
+      "davies_bouldin": 0.4056819374712898,
+      "n_clusters": 2,
+      "execution_time_ms": 2.8
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 100,
+        "n_components": 3
+      },
+      "silhouette_score": 0.5960682637285764,
+      "calinski_harabasz": 684.3935686623455,
+      "davies_bouldin": 0.5143532080748652,
+      "n_clusters": 3,
+      "execution_time_ms": 6
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 50,
+        "n_components": 4
+      },
+      "silhouette_score": 0.5710074323255789,
+      "calinski_harabasz": 716.5908594454768,
+      "davies_bouldin": 0.5067750704472657,
+      "n_clusters": 4,
+      "execution_time_ms": 3.6
+    },
+    {
+      "task_name": "clustering",
+      "config": {
+        "model_type": "gaussian_mixture",
+        "max_iter": 100,
+        "n_components": 4
+      },
+      "silhouette_score": 0.5590562323995419,
+      "calinski_harabasz": 691.5659114176,
+      "davies_bouldin": 0.5171290350484055,
+      "n_clusters": 4,
+      "execution_time_ms": 6.8
+    }
+  ]
+}
