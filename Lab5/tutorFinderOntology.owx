@@ -1,0 +1,907 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/ontologies/tutorFinderRecommendationSystem"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/ontologies/tutorFinderRecommendationSystem">
+    <Prefix name="" IRI="http://www.semanticweb.org/ontologies/tutor_finder_recommendation_system#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Annotation>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <Literal xml:lang="ru">Онтология для диссертации по гибридным рекомендательным системам образовательных услуг</Literal>
+    </Annotation>
+    <Declaration>
+        <Class abbreviatedIRI=":АвтоматизированнаяСистема"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ГибриднаяМодель"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ДанныеДляАнализа"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ЗапросНаПоиск"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Исследование"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":КоллаборативнаяФильтрация"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":КонтентнаяФильтрация"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":МатричнаяФакторизация"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":МетодАнализаДанных"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":МетодМашинногоОбучения"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Микросервис"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":НавыкиСтудентов"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":НаучнаяПроблема"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":НеявныйОтклик"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Оценка"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПоведениеПользователей"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПоисковаяСистема"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Пользователь"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПроблемаАлгоритмов"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПроблемаДанных"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ПроблемаПерсонализации"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Просмотр"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":СистемаАнализаВзаимодействий"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":СистемаРанжирования"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":Студент"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ЦельИсследования"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ЧатОбщение"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI=":ЯвныйОтклик"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":анализирует"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":генерируетРекомендации"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":имеетЦель"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":использует"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":обрабатывает"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":оцениваетКачество"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":получаетЗапрос"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":предоставляет"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":производит"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":ранжирует"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI=":собирает"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетДату"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетЗначениеМетрики"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетОписание"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетПредмет"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетРейтинг"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI=":имеетЦену"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":АнализаторВзаимодействий"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ВзвешеннаяГибриднаяМодель"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Лайк1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":МетодАнализаПоведения"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":МетодМатричнойФакторизации"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":МетодСтатистическогоАнализа"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ПредложениеФизика1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Проблема1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Проблема2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Проблема3"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Просмотр1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":РанжировщикПредложений"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":РекомендательнаяСистемаTutorFinder"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Студент1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Студент2"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ЧатОбщение1"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual abbreviatedIRI=":ЭлектроннаяКоммерцияПоиск"/>
+    </Declaration>
+    <Declaration>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ГибриднаяМодель"/>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+        <Class abbreviatedIRI=":Исследование"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":КоллаборативнаяФильтрация"/>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":КонтентнаяФильтрация"/>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":МатричнаяФакторизация"/>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":МетодАнализаДанных"/>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":МетодМашинногоОбучения"/>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":МетодРекомендаций"/>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":НавыкиСтудентов"/>
+        <Class abbreviatedIRI=":ДанныеДляАнализа"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":НеявныйОтклик"/>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ПоведениеПользователей"/>
+        <Class abbreviatedIRI=":ДанныеДляАнализа"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ПроблемаАлгоритмов"/>
+        <Class abbreviatedIRI=":НаучнаяПроблема"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ПроблемаДанных"/>
+        <Class abbreviatedIRI=":НаучнаяПроблема"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ПроблемаПерсонализации"/>
+        <Class abbreviatedIRI=":НаучнаяПроблема"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Просмотр"/>
+        <Class abbreviatedIRI=":НеявныйОтклик"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+        <Class abbreviatedIRI=":Микросервис"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":СистемаАнализаВзаимодействий"/>
+        <Class abbreviatedIRI=":Микросервис"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":СистемаРанжирования"/>
+        <Class abbreviatedIRI=":Микросервис"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":Студент"/>
+        <Class abbreviatedIRI=":Пользователь"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ЧатОбщение"/>
+        <Class abbreviatedIRI=":НеявныйОтклик"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI=":ЯвныйОтклик"/>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":СистемаАнализаВзаимодействий"/>
+        <NamedIndividual abbreviatedIRI=":АнализаторВзаимодействий"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ГибриднаяМодель"/>
+        <NamedIndividual abbreviatedIRI=":ВзвешеннаяГибриднаяМодель"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":НеявныйОтклик"/>
+        <NamedIndividual abbreviatedIRI=":Лайк1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":МетодАнализаДанных"/>
+        <NamedIndividual abbreviatedIRI=":МетодАнализаПоведения"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":МатричнаяФакторизация"/>
+        <NamedIndividual abbreviatedIRI=":МетодМатричнойФакторизации"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":МетодАнализаДанных"/>
+        <NamedIndividual abbreviatedIRI=":МетодСтатистическогоАнализа"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеФизика1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПроблемаДанных"/>
+        <NamedIndividual abbreviatedIRI=":Проблема1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПроблемаАлгоритмов"/>
+        <NamedIndividual abbreviatedIRI=":Проблема2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПроблемаПерсонализации"/>
+        <NamedIndividual abbreviatedIRI=":Проблема3"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Просмотр"/>
+        <NamedIndividual abbreviatedIRI=":Просмотр1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":СистемаРанжирования"/>
+        <NamedIndividual abbreviatedIRI=":РанжировщикПредложений"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+        <NamedIndividual abbreviatedIRI=":РекомендательнаяСистемаTutorFinder"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Студент"/>
+        <NamedIndividual abbreviatedIRI=":Студент1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":Студент"/>
+        <NamedIndividual abbreviatedIRI=":Студент2"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ЦельИсследования"/>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ЧатОбщение"/>
+        <NamedIndividual abbreviatedIRI=":ЧатОбщение1"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class abbreviatedIRI=":ПоисковаяСистема"/>
+        <NamedIndividual abbreviatedIRI=":ЭлектроннаяКоммерцияПоиск"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":анализирует"/>
+        <NamedIndividual abbreviatedIRI=":АнализаторВзаимодействий"/>
+        <NamedIndividual abbreviatedIRI=":Просмотр1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":анализирует"/>
+        <NamedIndividual abbreviatedIRI=":АнализаторВзаимодействий"/>
+        <NamedIndividual abbreviatedIRI=":ЧатОбщение1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":имеетЦель"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+        <NamedIndividual abbreviatedIRI=":МетодАнализаПоведения"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+        <NamedIndividual abbreviatedIRI=":МетодМатричнойФакторизации"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+        <NamedIndividual abbreviatedIRI=":МетодСтатистическогоАнализа"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":ранжирует"/>
+        <NamedIndividual abbreviatedIRI=":РанжировщикПредложений"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":генерируетРекомендации"/>
+        <NamedIndividual abbreviatedIRI=":РекомендательнаяСистемаTutorFinder"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":производит"/>
+        <NamedIndividual abbreviatedIRI=":Студент1"/>
+        <NamedIndividual abbreviatedIRI=":Просмотр1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":производит"/>
+        <NamedIndividual abbreviatedIRI=":Студент1"/>
+        <NamedIndividual abbreviatedIRI=":ЧатОбщение1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+        <NamedIndividual abbreviatedIRI=":Проблема1"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+        <NamedIndividual abbreviatedIRI=":Проблема2"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+        <NamedIndividual abbreviatedIRI=":Цель1"/>
+        <NamedIndividual abbreviatedIRI=":Проблема3"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+        <NamedIndividual abbreviatedIRI=":Лайк1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетДату"/>
+        <NamedIndividual abbreviatedIRI=":МояДиссертация"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#date">2026-06-30</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетПредмет"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+        <Literal>Математика</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетЦену"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеМатематика1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1500</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетПредмет"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеФизика1"/>
+        <Literal>Физика</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетЦену"/>
+        <NamedIndividual abbreviatedIRI=":ПредложениеФизика1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">2000</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетОписание"/>
+        <NamedIndividual abbreviatedIRI=":Проблема1"/>
+        <Literal>Разреженность данных о пользовательских предпочтениях приводит к снижению точности рекомендаций</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетОписание"/>
+        <NamedIndividual abbreviatedIRI=":Проблема2"/>
+        <Literal>Классические алгоритмы коллаборативной фильтрации не учитывают неявную обратную связь</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетОписание"/>
+        <NamedIndividual abbreviatedIRI=":Проблема3"/>
+        <Literal>Проблема холодного старта для новых пользователей без истории взаимодействий</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+        <NamedIndividual abbreviatedIRI=":Просмотр1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетЗначениеМетрики"/>
+        <NamedIndividual abbreviatedIRI=":РекомендательнаяСистемаTutorFinder"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#float">0.85</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+        <NamedIndividual abbreviatedIRI=":ЧатОбщение1"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">5</Literal>
+    </DataPropertyAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":анализирует"/>
+        <Class abbreviatedIRI=":СистемаАнализаВзаимодействий"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":генерируетРекомендации"/>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":имеетЦель"/>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":производит"/>
+        <Class abbreviatedIRI=":Пользователь"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":ранжирует"/>
+        <Class abbreviatedIRI=":СистемаРанжирования"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+        <Class abbreviatedIRI=":ЦельИсследования"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":анализирует"/>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":генерируетРекомендации"/>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":имеетЦель"/>
+        <Class abbreviatedIRI=":ЦельИсследования"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":используетМетод"/>
+        <Class abbreviatedIRI=":МетодИсследования"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":производит"/>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":ранжирует"/>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI=":решаетПроблему"/>
+        <Class abbreviatedIRI=":НаучнаяПроблема"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+        <Class abbreviatedIRI=":Взаимодействие"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":имеетДату"/>
+        <Class abbreviatedIRI=":ДиссертационнаяРабота"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":имеетЗначениеМетрики"/>
+        <Class abbreviatedIRI=":РекомендательнаяСистема"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":имеетПредмет"/>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI=":имеетЦену"/>
+        <Class abbreviatedIRI=":ПредложениеРепетитора"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетВес"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетДату"/>
+        <Datatype abbreviatedIRI="xsd:date"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетЗначениеМетрики"/>
+        <Datatype abbreviatedIRI="xsd:float"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетОписание"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетПредмет"/>
+        <Datatype abbreviatedIRI="xsd:string"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI=":имеетЦену"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:АвтоматизированнаяСистема</AbbreviatedIRI>
+        <Literal xml:lang="ru">Автоматизированная система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:АнализаторВзаимодействий</AbbreviatedIRI>
+        <Literal xml:lang="ru">Анализатор пользовательских взаимодействий</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Взаимодействие</AbbreviatedIRI>
+        <Literal xml:lang="ru">Взаимодействие</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ВзвешеннаяГибриднаяМодель</AbbreviatedIRI>
+        <Literal xml:lang="ru">Взвешенная гибридная модель рекомендаций</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ГибриднаяМодель</AbbreviatedIRI>
+        <Literal xml:lang="ru">Гибридная модель</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ДанныеДляАнализа</AbbreviatedIRI>
+        <Literal xml:lang="ru">Данные для анализа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ДиссертационнаяРабота</AbbreviatedIRI>
+        <Literal xml:lang="ru">Диссертационная работа</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Исследование</AbbreviatedIRI>
+        <Literal xml:lang="ru">Исследование</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:КоллаборативнаяФильтрация</AbbreviatedIRI>
+        <Literal xml:lang="ru">Коллаборативная фильтрация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:КонтентнаяФильтрация</AbbreviatedIRI>
+        <Literal xml:lang="ru">Контентная фильтрация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Лайк1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Добавление в избранное</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МатричнаяФакторизация</AbbreviatedIRI>
+        <Literal xml:lang="ru">Матричная факторизация</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодАнализаДанных</AbbreviatedIRI>
+        <Literal xml:lang="ru">Метод анализа данных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодАнализаПоведения</AbbreviatedIRI>
+        <Literal xml:lang="ru">Анализ поведенческих паттернов пользователей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодИсследования</AbbreviatedIRI>
+        <Literal xml:lang="ru">Метод исследования</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодМатричнойФакторизации</AbbreviatedIRI>
+        <Literal xml:lang="ru">SVD для выявления латентных факторов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодМашинногоОбучения</AbbreviatedIRI>
+        <Literal xml:lang="ru">Метод машинного обучения</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодРекомендаций</AbbreviatedIRI>
+        <Literal xml:lang="ru">Метод рекомендаций</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МетодСтатистическогоАнализа</AbbreviatedIRI>
+        <Literal xml:lang="ru">Статистический анализ эффективности алгоритмов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Микросервис</AbbreviatedIRI>
+        <Literal xml:lang="ru">Микросервис</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:МояДиссертация</AbbreviatedIRI>
+        <Literal xml:lang="ru">Сравнительный анализ алгоритмов ранжирования в гибридных рекомендательных системах</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:НавыкиСтудентов</AbbreviatedIRI>
+        <Literal xml:lang="ru">Навыки студентов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:НаучнаяПроблема</AbbreviatedIRI>
+        <Literal xml:lang="ru">Научная проблема</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:НеявныйОтклик</AbbreviatedIRI>
+        <Literal xml:lang="ru">Неявный отклик</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Оценка</AbbreviatedIRI>
+        <Literal xml:lang="ru">Оценка</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПоведениеПользователей</AbbreviatedIRI>
+        <Literal xml:lang="ru">Поведение пользователей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПоисковаяСистема</AbbreviatedIRI>
+        <Literal xml:lang="ru">Поисковая система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Пользователь</AbbreviatedIRI>
+        <Literal xml:lang="ru">Пользователь</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПредложениеМатематика1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Занятия по математике для подготовки к ЕГЭ</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПредложениеРепетитора</AbbreviatedIRI>
+        <Literal xml:lang="ru">Предложение репетитора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПредложениеФизика1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Занятия по физике для школьников</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Проблема1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Проблема разреженности данных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Проблема2</AbbreviatedIRI>
+        <Literal xml:lang="ru">Недостаточный учет неявной обратной связи</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Проблема3</AbbreviatedIRI>
+        <Literal xml:lang="ru">Проблема холодного старта</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПроблемаАлгоритмов</AbbreviatedIRI>
+        <Literal xml:lang="ru">Проблема алгоритмов</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПроблемаДанных</AbbreviatedIRI>
+        <Literal xml:lang="ru">Проблема данных</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ПроблемаПерсонализации</AbbreviatedIRI>
+        <Literal xml:lang="ru">Проблема персонализации</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Просмотр</AbbreviatedIRI>
+        <Literal xml:lang="ru">Просмотр</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Просмотр1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Просмотр карточки репетитора</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:РанжировщикПредложений</AbbreviatedIRI>
+        <Literal xml:lang="ru">Система ранжирования предложений</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:РекомендательнаяСистема</AbbreviatedIRI>
+        <Literal xml:lang="ru">Рекомендательная система</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:РекомендательнаяСистемаTutorFinder</AbbreviatedIRI>
+        <Literal xml:lang="ru">Рекомендательная система Tutor Finder</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:СистемаАнализаВзаимодействий</AbbreviatedIRI>
+        <Literal xml:lang="ru">Система анализа взаимодействий</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:СистемаРанжирования</AbbreviatedIRI>
+        <Literal xml:lang="ru">Система ранжирования</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Студент</AbbreviatedIRI>
+        <Literal xml:lang="ru">Студент</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Студент1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Студент Алексей</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Студент2</AbbreviatedIRI>
+        <Literal xml:lang="ru">Студент Мария</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:Цель1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Повышение точности рекомендаций на 15% через взвешивание неявных взаимодействий</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ЦельИсследования</AbbreviatedIRI>
+        <Literal xml:lang="ru">Цель исследования</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ЧатОбщение</AbbreviatedIRI>
+        <Literal xml:lang="ru">Чат общение</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ЧатОбщение1</AbbreviatedIRI>
+        <Literal xml:lang="ru">Начало переписки с репетитором</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ЭлектроннаяКоммерцияПоиск</AbbreviatedIRI>
+        <Literal xml:lang="ru">Поисковая система Elasticsearch</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>:ЯвныйОтклик</AbbreviatedIRI>
+        <Literal xml:lang="ru">Явный отклик</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
