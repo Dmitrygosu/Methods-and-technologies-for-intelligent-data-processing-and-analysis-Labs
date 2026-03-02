@@ -1,0 +1,115 @@
+--- Запуск бенчмарков для задачи о ферзях ---
+
+Размер доски: 8x8
+BF:  Time: 0.000 ms, Iter: 2830
+BT:  Time: 0.000 ms, Iter: 876
+H:   Time: 0.000 ms, Iter: 876
+L:   Time: 0.000 ms, Iter: 145
+fatal error: all goroutines are asleep - deadlock!
+
+goroutine 1 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0xc00011a010?, 0xc0?, 0xc000061c98?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch(0x8, 0x77359400)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:84 +0x32d
+main.main.func2(0xab18c0?)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/main.go:44 +0x18
+main.RunBenchmark({0xab732e, 0xb}, 0x8, 0xac2008)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/benchmarks.go:19 +0x6d
+main.main()
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/main.go:43 +0x9c5
+
+goroutine 6 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x1?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x0)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 7 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x1)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 8 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x2)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 9 [chan send]:
+queens-lab/algorithms.MultiAgentSearch.func1(0x3)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:69 +0x406
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 10 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x4)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 11 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x5)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 12 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0x0?, 0x0?, 0x0?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x6)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+
+goroutine 13 [sync.Mutex.Lock]:
+sync.runtime_SemacquireMutex(0xc00012feb8?, 0xe5?, 0xc00012fed8?)
+	C:/Program Files/Go/src/runtime/sema.go:95 +0x25
+sync.(*Mutex).lockSlow(0xc00000a170)
+	C:/Program Files/Go/src/sync/mutex.go:173 +0x15d
+sync.(*Mutex).Lock(...)
+	C:/Program Files/Go/src/sync/mutex.go:92
+queens-lab/algorithms.MultiAgentSearch.func1(0x7)
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:38 +0xbe
+created by queens-lab/algorithms.MultiAgentSearch in goroutine 1
+	C:/Users/ignat/Desktop/Delay/Lab1(7)/algorithms/multiagent.go:32 +0x17d
+exit status 2

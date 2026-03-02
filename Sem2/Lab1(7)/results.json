@@ -1,0 +1,107 @@
+[
+  {
+    "algo": "BruteForce (Naive)",
+    "n": 8,
+    "time_ms": 0,
+    "iterations": 2830,
+    "success": true
+  },
+  {
+    "algo": "Backtracking",
+    "n": 8,
+    "time_ms": 0,
+    "iterations": 876,
+    "success": true
+  },
+  {
+    "algo": "Heuristic (Pruning)",
+    "n": 8,
+    "time_ms": 0,
+    "iterations": 876,
+    "success": true
+  },
+  {
+    "algo": "Logical (Greedy)",
+    "n": 8,
+    "time_ms": 0,
+    "iterations": 1508,
+    "success": true
+  },
+  {
+    "algo": "Multi-Agent",
+    "n": 8,
+    "time_ms": 6.844,
+    "iterations": 45,
+    "success": true
+  },
+  {
+    "algo": "BruteForce (Naive)",
+    "n": 10,
+    "time_ms": 1.054,
+    "iterations": 59034,
+    "success": true
+  },
+  {
+    "algo": "Backtracking",
+    "n": 10,
+    "time_ms": 0,
+    "iterations": 975,
+    "success": true
+  },
+  {
+    "algo": "Heuristic (Pruning)",
+    "n": 10,
+    "time_ms": 0,
+    "iterations": 975,
+    "success": true
+  },
+  {
+    "algo": "Logical (Greedy)",
+    "n": 10,
+    "time_ms": 0,
+    "iterations": 112,
+    "success": true
+  },
+  {
+    "algo": "Multi-Agent",
+    "n": 10,
+    "time_ms": 25.895,
+    "iterations": 149,
+    "success": true
+  },
+  {
+    "algo": "BruteForce (Naive)",
+    "n": 12,
+    "time_ms": 14.48,
+    "iterations": 1000001,
+    "success": false
+  },
+  {
+    "algo": "Backtracking",
+    "n": 12,
+    "time_ms": 0,
+    "iterations": 3066,
+    "success": true
+  },
+  {
+    "algo": "Heuristic (Pruning)",
+    "n": 12,
+    "time_ms": 0,
+    "iterations": 3066,
+    "success": true
+  },
+  {
+    "algo": "Logical (Greedy)",
+    "n": 12,
+    "time_ms": 0,
+    "iterations": 816,
+    "success": true
+  },
+  {
+    "algo": "Multi-Agent",
+    "n": 12,
+    "time_ms": 25.099,
+    "iterations": 152,
+    "success": true
+  }
+]

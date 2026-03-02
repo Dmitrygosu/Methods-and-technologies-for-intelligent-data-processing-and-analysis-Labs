@@ -1,0 +1,7 @@
+gymnasium
+stable-baselines3
+sb3-contrib
+numpy
+PyQt6
+shimmy
+tensorboard
