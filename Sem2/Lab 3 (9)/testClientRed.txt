@@ -1,4 +1,3 @@
-#Данная версия является альтернативной и лишь путем к успешной,синяя-идеальная,эта -  как пример иной реализации.
 import socket
 import json
 import math
@@ -260,17 +259,17 @@ class Agent:
 def print_summary():
     s, r, b = team_memory["stats"], team_memory.get('prev_points',0), team_memory.get('enemy_points',0)
     res = "WIN" if r > b else ("LOSS" if r < b else "DRAW")
-    light_log(f"--- ИТОГ: RED {r} vs BLUE {b} [{res}] | Станы: {s['stuns']}, Застрял: {s['stucks']}, Кражи: {s['steal_success']} ---")
+    light_log(f"--- РРўРћР“: RED {r} vs BLUE {b} [{res}] | РЎС‚Р°РЅС‹: {s['stuns']}, Р—Р°СЃС‚СЂСЏР»: {s['stucks']}, РљСЂР°Р¶Рё: {s['steal_success']} ---")
     if s["total_ticks"] > 0:
         parts = [f"{k}: {v/s['total_ticks']*100:.1f}%" for k, v in s["tactics"].items() if v > 0]
-        light_log("Тактики: " + " | ".join(parts))
+        light_log("РўР°РєС‚РёРєРё: " + " | ".join(parts))
 
 def start_client():
     sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     sock.settimeout(None); agents_ai, agent_idx = {}, 0
     try:
         sock.connect((HOST, PORT))
-        light_log(f"[SYSTEM] Подключились: {TEAM.upper()}")
+        light_log(f"[SYSTEM] РџРѕРґРєР»СЋС‡РёР»РёСЃСЊ: {TEAM.upper()}")
         sock.sendall((json.dumps({"team": TEAM}) + "\n").encode("utf-8"))
         buffer, player_id = "", None
         while True:
