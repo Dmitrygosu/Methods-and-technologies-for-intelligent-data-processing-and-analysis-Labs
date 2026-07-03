@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Погодный советник</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    min-height: 100vh;
+    font-family: "Segoe UI", system-ui, sans-serif;
+    background: linear-gradient(160deg, #1e3a5f 0%, #2d5a87 45%, #4a7ba6 100%);
+    color: #eaf2f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px;
+  }
+
+  h1 { font-size: 28px; font-weight: 600; letter-spacing: .5px; }
+  .subtitle { color: #b8cfe0; margin-top: 6px; font-size: 14px; }
+
+  .search {
+    display: flex;
+    gap: 10px;
+    margin: 28px 0;
+    width: 100%;
+    max-width: 520px;
+  }
+  .search input {
+    flex: 1;
+    padding: 13px 18px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    background: rgba(255,255,255,.94);
+    color: #22303c;
+    outline: none;
+  }
+  .search button {
+    padding: 13px 26px;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    background: #ffb347;
+    color: #4a3200;
+    transition: transform .12s, box-shadow .12s;
+  }
+  .search button:hover { transform: translateY(-1px); box-shadow: 0 6px 18px rgba(0,0,0,.25); }
+  .search button:disabled { opacity: .6; cursor: wait; transform: none; }
+
+  .history {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 520px;
+    margin: -18px 0 20px;
+  }
+  .history:empty { margin: 0; }
+  .history .chip {
+    padding: 5px 12px;
+    border-radius: 14px;
+    font-size: 13px;
+    background: rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.18);
+    color: #d5e5f2;
+    cursor: pointer;
+    transition: background .12s;
+  }
+  .history .chip:hover { background: rgba(255,255,255,.2); }
+
+  #status { min-height: 24px; font-size: 15px; color: #ffd9a0; }
+  #status.error { color: #ff9e9e; }
+
+  .loader {
+    display: inline-block;
+    width: 16px; height: 16px;
+    border: 3px solid rgba(255,255,255,.3);
+    border-top-color: #ffd9a0;
+    border-radius: 50%;
+    animation: spin .8s linear infinite;
+    vertical-align: -3px;
+    margin-right: 8px;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .result {
+    display: none;
+    width: 100%;
+    max-width: 860px;
+    margin-top: 10px;
+  }
+  .result.show { display: block; animation: fadein .4s ease; }
+  @keyframes fadein { from { opacity: 0; transform: translateY(12px); } to { opacity: 1; } }
+
+  .cards { display: grid; grid-template-columns: 1fr 1.4fr; gap: 18px; }
+  @media (max-width: 720px) { .cards { grid-template-columns: 1fr; } }
+
+  .card {
+    background: rgba(255,255,255,.08);
+    border: 1px solid rgba(255,255,255,.15);
+    border-radius: 16px;
+    padding: 22px 24px;
+    backdrop-filter: blur(6px);
+  }
+  .card h2 {
+    font-size: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: #ffd9a0;
+    margin-bottom: 14px;
+    font-weight: 600;
+  }
+
+  .temp-big { font-size: 52px; font-weight: 200; line-height: 1; }
+  .temp-big small { font-size: 20px; color: #b8cfe0; font-weight: 400; }
+  .wx-desc { margin: 8px 0 16px; font-size: 17px; text-transform: capitalize; }
+  .wx-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 16px; font-size: 14px; }
+  .wx-grid b { color: #fff; font-weight: 600; }
+  .wx-grid span { color: #b8cfe0; }
+
+  .summary { font-size: 16px; line-height: 1.55; margin-bottom: 16px; }
+
+  .badge {
+    display: inline-block;
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 14px;
+  }
+  .badge.yes { background: #4f83b8; color: #fff; }
+  .badge.no  { background: rgba(255,255,255,.15); color: #d5e5f2; }
+
+  ul.items { list-style: none; }
+  ul.items li {
+    padding: 8px 0 8px 28px;
+    position: relative;
+    border-bottom: 1px dashed rgba(255,255,255,.12);
+    font-size: 15px;
+    line-height: 1.45;
+  }
+  ul.items li:last-child { border-bottom: none; }
+  ul.items li::before {
+    content: "";
+    position: absolute;
+    left: 6px; top: 15px;
+    width: 7px; height: 7px;
+    border-radius: 50%;
+    background: #ffb347;
+  }
+
+  .comfort { margin-top: 16px; font-size: 14px; color: #b8cfe0; }
+  .comfort-bar {
+    height: 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,.15);
+    margin-top: 6px;
+    overflow: hidden;
+  }
+  .comfort-bar div {
+    height: 100%;
+    border-radius: 4px;
+    background: linear-gradient(90deg, #ff8c66, #ffb347, #8fd07a);
+    transition: width .6s ease;
+  }
+
+  footer { margin-top: auto; padding-top: 34px; font-size: 12px; color: #8fa9bd; }
+</style>
+</head>
+<body>
+
+<h1>Погодный советник</h1>
+<div class="subtitle">Open-Meteo + локальная LLM (Ollama) — что надеть и брать ли зонт</div>
+
+<form class="search" id="form">
+  <input id="city" type="text" placeholder="Введите город, например: Ульяновск" autocomplete="off" autofocus>
+  <button id="btn" type="submit">Узнать</button>
+</form>
+
+<div class="history" id="history"></div>
+
+<div id="status"></div>
+
+<div class="result" id="result">
+  <div class="cards">
+    <div class="card">
+      <h2 id="cityTitle">Погода</h2>
+      <div class="temp-big"><span id="temp"></span>°C <small>ощущается <span id="feels"></span>°C</small></div>
+      <div class="wx-desc" id="desc"></div>
+      <div class="wx-grid">
+        <span>Сегодня</span><b id="range"></b>
+        <span>Влажность</span><b id="hum"></b>
+        <span>Ветер</span><b id="wind"></b>
+        <span>Вероятность осадков</span><b id="rain"></b>
+      </div>
+      <div class="comfort">
+        Индекс комфорта: <b id="comfortVal"></b>/10
+        <div class="comfort-bar"><div id="comfortBar"></div></div>
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>Совет от модели</h2>
+      <div class="summary" id="summary"></div>
+      <div class="badge" id="umbrella"></div>
+      <ul class="items" id="clothing"></ul>
+      <ul class="items" id="tips" style="margin-top:10px"></ul>
+    </div>
+  </div>
+</div>
+
+<footer>Лабораторная работа №4 · Игнатьев Д.С., ИСТмд-11 · прогноз: open-meteo.com, модель: qwen2.5:3b</footer>
+
+<script>
+const form = document.getElementById("form");
+const btn = document.getElementById("btn");
+const status = document.getElementById("status");
+const result = document.getElementById("result");
+const historyBox = document.getElementById("history");
+
+const HISTORY_KEY = "weatherAdvisorHistory";
+const HISTORY_MAX = 6;
+
+function loadHistory() {
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY)) || [];
+  } catch {
+    return [];
+  }
+}
+
+function saveHistory(city) {
+  const list = loadHistory().filter(c => c.toLowerCase() !== city.toLowerCase());
+  list.unshift(city);
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(list.slice(0, HISTORY_MAX)));
+  renderHistory();
+}
+
+function renderHistory() {
+  const list = loadHistory();
+  historyBox.innerHTML = "";
+  list.forEach(city => {
+    const chip = document.createElement("span");
+    chip.className = "chip";
+    chip.textContent = city;
+    chip.addEventListener("click", () => {
+      document.getElementById("city").value = city;
+      form.requestSubmit();
+    });
+    historyBox.appendChild(chip);
+  });
+}
+
+renderHistory();
+
+function fill(listId, items) {
+  const ul = document.getElementById(listId);
+  ul.innerHTML = "";
+  (items || []).forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = t;
+    ul.appendChild(li);
+  });
+}
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const city = document.getElementById("city").value.trim();
+  if (!city) return;
+
+  btn.disabled = true;
+  result.classList.remove("show");
+  status.className = "";
+  status.innerHTML = '<span class="loader"></span>Запрашиваю прогноз и жду ответ модели… (первый запрос дольше — модель загружается в память)';
+
+  try {
+    const resp = await fetch("/api/advice?city=" + encodeURIComponent(city));
+    const data = await resp.json();
+    if (!resp.ok) throw new Error(data.error || "Ошибка сервера");
+
+    const now = data.weather.now, day = data.weather.today, adv = data.advice;
+    document.getElementById("cityTitle").textContent = data.city.name + ", " + data.city.country;
+    document.getElementById("temp").textContent = Math.round(now.temp);
+    document.getElementById("feels").textContent = Math.round(now.feels_like);
+    document.getElementById("desc").textContent = now.description;
+    document.getElementById("range").textContent = Math.round(day.t_min) + "…" + Math.round(day.t_max) + " °C";
+    document.getElementById("hum").textContent = now.humidity + " %";
+    document.getElementById("wind").textContent = now.wind + " км/ч";
+    document.getElementById("rain").textContent = day.rain_prob + " %";
+
+    document.getElementById("summary").textContent = adv.summary;
+    const ub = document.getElementById("umbrella");
+    ub.textContent = adv.umbrella ? "Зонт: брать — " + adv.umbrella_reason
+                                  : "Зонт: не нужен — " + adv.umbrella_reason;
+    ub.className = "badge " + (adv.umbrella ? "yes" : "no");
+    fill("clothing", adv.clothing);
+    fill("tips", adv.tips);
+    document.getElementById("comfortVal").textContent = adv.comfort;
+    document.getElementById("comfortBar").style.width = (adv.comfort * 10) + "%";
+
+    status.textContent = "";
+    result.classList.add("show");
+    saveHistory(data.city.name);
+  } catch (err) {
+    status.className = "error";
+    status.textContent = err.message;
+  } finally {
+    btn.disabled = false;
+  }
+});
+</script>
+</body>
+</html>

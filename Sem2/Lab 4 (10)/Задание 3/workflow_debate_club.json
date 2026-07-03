@@ -1,0 +1,95 @@
+{
+  "name": "Дискуссионный клуб (Оптимист, Скептик, Эксперт)",
+  "nodes": [
+    {
+      "parameters": {
+        "public": true,
+        "options": {}
+      },
+      "id": "a1b2c3d4-0001-4000-8000-000000000001",
+      "name": "Когда приходит сообщение",
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [-200, 0],
+      "webhookId": "f47ac10b-58cc-4372-a567-0e02b2c3d479"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({model: 'optimist', prompt: 'Тема обсуждения: ' + $json.chatInput, stream: false}) }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "a1b2c3d4-0002-4000-8000-000000000002",
+      "name": "Оптимист",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [60, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({model: 'skeptik', prompt: 'Тема обсуждения: ' + $('Когда приходит сообщение').item.json.chatInput + '\\n\\nРеплика Оптимиста: ' + $('Оптимист').item.json.response, stream: false}) }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "a1b2c3d4-0003-4000-8000-000000000003",
+      "name": "Скептик",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [320, 0]
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "http://host.docker.internal:11434/api/generate",
+        "sendBody": true,
+        "specifyBody": "json",
+        "jsonBody": "={{ JSON.stringify({model: 'ekspert', prompt: 'Тема обсуждения: ' + $('Когда приходит сообщение').item.json.chatInput + '\\n\\nРеплика Оптимиста: ' + $('Оптимист').item.json.response + '\\n\\nРеплика Скептика: ' + $('Скептик').item.json.response, stream: false}) }}",
+        "options": {
+          "timeout": 180000
+        }
+      },
+      "id": "a1b2c3d4-0004-4000-8000-000000000004",
+      "name": "Эксперт",
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [580, 0]
+    },
+    {
+      "parameters": {
+        "jsCode": "const opt = $('Оптимист').item.json.response.trim();\nconst skep = $('Скептик').item.json.response.trim();\nconst exp = $('Эксперт').item.json.response.trim();\n\nconst text = '**Оптимист:** ' + opt + '\\n\\n---\\n\\n**Скептик:** ' + skep + '\\n\\n---\\n\\n**Эксперт:** ' + exp;\n\nreturn [{ json: { output: text } }];"
+      },
+      "id": "a1b2c3d4-0005-4000-8000-000000000005",
+      "name": "Сборка ответа",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [840, 0]
+    }
+  ],
+  "connections": {
+    "Когда приходит сообщение": {
+      "main": [[{ "node": "Оптимист", "type": "main", "index": 0 }]]
+    },
+    "Оптимист": {
+      "main": [[{ "node": "Скептик", "type": "main", "index": 0 }]]
+    },
+    "Скептик": {
+      "main": [[{ "node": "Эксперт", "type": "main", "index": 0 }]]
+    },
+    "Эксперт": {
+      "main": [[{ "node": "Сборка ответа", "type": "main", "index": 0 }]]
+    }
+  },
+  "settings": {
+    "executionOrder": "v1"
+  }
+}
