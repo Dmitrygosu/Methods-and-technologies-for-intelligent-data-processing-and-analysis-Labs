@@ -19,8 +19,6 @@ models:
 	cd "$(LAB)/Задание 4/models" && $(OLLAMA) create pochta-analitik -f pochta-analitik.Modelfile
 	$(OLLAMA) list
 
-# ----- запуск заданий -----
-
 # погодный советник: http://127.0.0.1:5000
 task1:
 	cd "$(LAB)/Задание 1/weather_advisor" && python app.py
@@ -39,15 +37,11 @@ task3 task4: n8n-up
 check:
 	cd "$(LAB)/Задание 1/weather_advisor" && python check_advisor.py
 
-# ----- запуск/остановка всего стенда одной командой -----
-
 start:
 	powershell -NoProfile -ExecutionPolicy Bypass -File "$(LAB)/start_all.ps1"
 
 stop:
 	powershell -NoProfile -ExecutionPolicy Bypass -File "$(LAB)/stop_all.ps1"
-
-# ----- n8n -----
 
 n8n-up:
 	-docker start n8n 2>/dev/null || docker run -d --name n8n -p 5678:5678 \
@@ -59,8 +53,6 @@ n8n-up:
 
 n8n-stop:
 	docker stop n8n
-
-# ----- управление ллмками -----
 
 # выгрузить все модели из видеопамяти (Ollama остаётся работать)
 llm-stop:
